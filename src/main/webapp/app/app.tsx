@@ -4,7 +4,7 @@ import './app.scss';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Card } from 'reactstrap';
-import { HashRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import { ToastContainer, ToastPosition, toast } from 'react-toastify';
 
 import { IRootState } from 'app/shared/reducers';

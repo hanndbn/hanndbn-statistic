@@ -1,5 +1,6 @@
 package com.hannd.statistic.config;
 
+import com.hannd.statistic.web.Html5RouteFilter;
 import io.github.jhipster.config.JHipsterConstants;
 import io.github.jhipster.config.JHipsterProperties;
 import io.github.jhipster.web.filter.CachingHttpHeadersFilter;
@@ -153,6 +154,11 @@ public class WebConfigurer implements ServletContextInitializer, WebServerFactor
             source.registerCorsConfiguration("/v2/api-docs", config);
         }
         return new CorsFilter(source);
+    }
+
+    @Bean
+    public Html5RouteFilter html5RouteFilter() {
+        return new Html5RouteFilter();
     }
 
 }
